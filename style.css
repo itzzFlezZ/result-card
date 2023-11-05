@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('woff');
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    border-radius: 22px;
+    box-shadow: 3px 13px 30px 2px hsla(241, 100%, 89%, 0.7);
+    width: 600px;
+    height: 430px;
+
+}
+
+.left {
+    grid-area: left;
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 22px;
+    width: 320px;
+    height: 430px;
+}
+.left h1 {
+    
+    color: hsl(241, 100%, 89%);
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.left h2 {
+    color: white;
+    font-size: 63px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.left h2::after {
+    content: "of 100";
+    position: absolute;
+    font-size: 16px;
+    top: 193px;
+    align-items: center;
+    color:hsl(241, 100%, 89%);
+}
+
+.circle {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    height: 160px;
+    aspect-ratio: 1;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.left h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.left p {
+    color: hsl(241, 100%, 89%);
+    padding: 12px;
+    margin-top: -19px;
+    text-align: center;
+    
+}
+
+.right {
+    grid-area: right;
+    margin-left: 30px;;
+}
+
+.right h2 {
+    font-size: 22px;
+    color: hsl(224, 30%, 27%)
+}
+
+.reaction, .memory, .verbal, .visual {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 0 0 0 15px;
+}
+.reaction p,
+.memory p,
+.verbal p,
+.visual p  {
+    font-weight: 600;
+    margin-right: 18px;
+}
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.075);
+}
+.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.075)
+}
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.075);
+}
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.075);
+}
+svg {
+    margin-right: 13px;
+}
+
+.reaction span {
+    margin-left: 30px;
+}
+.memory span {
+    margin-left: 33px;
+}
+.verbal span {
+    margin-left: 48px;
+}
+.visual span {
+    margin-left: 52px;
+}
+.reaction span,
+.memory span,
+.verbal span,
+.visual span {
+    font-weight: 700;
+    color: hsl(224, 30%, 27%)
+}
+
+.reaction span::after,
+.memory span::after,
+.verbal span::after,
+.visual span::after {
+    content: "/ 100";
+    margin-left: 8px;;
+    color: hsl(241, 100%, 89%)
+}
+
+.btn {
+    width: 230px;
+    height: 45px;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    border-radius: 33px;
+    font-weight: 550;
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "left"
+    "right";
+    width: 375px;
+    box-shadow: none;
+  }
+
+}
+    
